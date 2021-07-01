@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.people.usi.ch/fornaran/ontology/NormativeLanguage"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.people.usi.ch/fornaran/ontology/NormativeLanguage"
+     versionIRI="http://www.people.usi.ch/fornaran/ontology/NormativeLanguage/1.0.0">
+    <Prefix name="" IRI="http://www.people.usi.ch/fornaran/ontology/NormativeLanguage#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="odrl" IRI="http://www.w3.org/ns/odrl/2/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="event" IRI="http://www.people.usi.ch/fornaran/ontology/event#"/>
+    <Import>http://www.w3.org/ns/odrl/2/</Import>
+    <Import>http://www.people.usi.ch/fornaran/ontology/event/1.0.0</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">OWL Normative Language</Literal>
+    </Annotation>
+    <Declaration>
+        <NamedIndividual IRI="#satisfied"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasActCondition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ComponentState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Prohibition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasState"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#conditional"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasContent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ActionDescription"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Obligation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#active"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#unSatisfied"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/Action"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EventDescription"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDeadlineDelta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DeonRelation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cancelled"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasExpiration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UnlPermission"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#violated"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#suspends"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isRealizedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDeonState"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasExpirationDelta"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDeadline"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fulfilled"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DeonState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Permission"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#ComponentState"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#satisfied"/>
+            <NamedIndividual IRI="#unSatisfied"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#ActionDescription"/>
+        <Class IRI="#EventDescription"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeonRelation"/>
+        <Class abbreviatedIRI="odrl:Rule"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Obligation"/>
+        <Class IRI="#DeonRelation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Permission"/>
+        <Class IRI="#DeonRelation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Prohibition"/>
+        <Class IRI="#DeonRelation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UnlPermission"/>
+        <Class IRI="#Permission"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#DeonState"/>
+        <NamedIndividual IRI="#active"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DeonState"/>
+        <NamedIndividual IRI="#cancelled"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DeonState"/>
+        <NamedIndividual IRI="#conditional"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DeonState"/>
+        <NamedIndividual IRI="#fulfilled"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ComponentState"/>
+        <NamedIndividual IRI="#satisfied"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ComponentState"/>
+        <NamedIndividual IRI="#unSatisfied"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DeonState"/>
+        <NamedIndividual IRI="#violated"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDeadlineDelta"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasActCondition"/>
+        <Class IRI="#DeonRelation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasContent"/>
+        <Class IRI="#DeonRelation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDeadline"/>
+        <Class IRI="#DeonRelation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDeadlineDelta"/>
+        <Class IRI="#DeonRelation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDeonState"/>
+        <Class IRI="#DeonRelation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasExpiration"/>
+        <Class IRI="#DeonRelation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasExpirationDelta"/>
+        <Class IRI="#DeonRelation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasState"/>
+        <Class IRI="#EventDescription"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isRealizedBy"/>
+        <Class IRI="#EventDescription"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#suspends"/>
+        <Class IRI="#DeonRelation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasActCondition"/>
+        <Class IRI="#EventDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasContent"/>
+        <Class IRI="#ActionDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDeadline"/>
+        <Class IRI="http://www.w3.org/2006/time#TemporalEntity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDeadlineDelta"/>
+        <Class IRI="http://www.w3.org/2006/time#TemporalEntity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDeonState"/>
+        <Class IRI="#DeonState"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasExpiration"/>
+        <Class IRI="http://www.w3.org/2006/time#TemporalEntity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasExpirationDelta"/>
+        <Class IRI="http://www.w3.org/2006/time#TemporalEntity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasState"/>
+        <Class IRI="#ComponentState"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isRealizedBy"/>
+        <Class abbreviatedIRI="event:Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#suspends"/>
+        <Class IRI="#DeonRelation"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
